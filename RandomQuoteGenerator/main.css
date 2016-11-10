@@ -1,0 +1,36 @@
+body{
+  background-image: url(http://cdn.wallpapersafari.com/20/36/4TLtNk.jpg);
+  background-repeat: repeat;
+}
+
+body{
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.qText{
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+h1{
+  font-family: 'Bungee Inline';
+  color: black;
+  font-weight: bolder;
+}
+
+.container{
+  text-align: center;
+  padding-top: 50px;
+}
+
+hr{
+  width: 600px;
+  border-bottom: 1px solid black;
+}
+
+.quote-box{
+  border-top: 5px double blue;
+  border-bottom: 5px double blue;
+  padding: 10px;
+  margin-bottom: 15px;
+}
