@@ -1,0 +1,35 @@
+
+body{
+  background-image: url(http://i613.photobucket.com/albums/tt219/Otto_Vogrincic/weather_zpsv7t51ikr.png);
+  background-repeat: repeat;
+}
+
+.box{
+  width: 350px;
+  height: 250px;
+  border: 1px solid black;
+  text-align: center;
+  margin-top: 100px;
+  background-image: url(http://i613.photobucket.com/albums/tt219/Otto_Vogrincic/stardust_zps91nhrvd9.png);
+  background-repeat: repeat;
+  border-radius: 20px;
+
+}
+
+h1, p, a, span{
+  font-family: 'Prociono', serif;
+  color: WHITE;
+  font-weight:900;
+}
+
+#getWeather{
+  font-size: 15px;
+}
+
+.skyBlue{
+  color: #6698FF;
+}
+
+#icon{
+  font-size: 50px;
+}
