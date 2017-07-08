@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'TwitchFontClear';
+  src:url('fonts/DIMIS___.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
+   font-family: 'TwitchFontSolid';
+   src:url('fonts/DIMITRI_.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'Varsity_Regular';
+   src:url('fonts/varsity_regular.ttf') format('truetype');
+}
+
+body{
+  background-image: url(images/purple-background.jpg);
+  color: white;
+}
+h1{
+  padding-top: 5%;
+  font-family: TwitchFontSolid;
+  font-size: 300%;
+  font-weight: 900;
+}
+table{
+  width: 100%;
+  font-family: TwitchFontClear;
+  font-size: 100%;
+}
+table#tb01 tr:nth-child(even){
+  background-color: #ffdf00;
+  border-bottom: 3px groove red;
+}
+table#tb01 tr:nth-child(odd){
+  background-color: #ffdf00;
+}
+th, td{
+  text-align: center;
+  padding: 5px;
+}
+td{
+  font-size: 150%;
+  font-family: Varsity_Regular !important;
+}
+th#th01, th#th02, th#th03{
+  border-top-right-radius: 3em;
+  border-bottom: 6px groove red;
+}
+tr#tr02{
+  border-bottom: 3px groove red;
+}
+td#ch04, td#status04, td#game04{
+  border-bottom-left-radius: 3em;
+}
+a{
+  color: white;
+}
+a:hover{
+  color: red;
+}
