@@ -1,0 +1,17 @@
+
+function fearNotLetter(str) {
+  var first = str.charCodeAt(0);
+  
+  for(i=0; i<str.length; i++){
+    if(first !== str.charCodeAt(i)){
+      return String.fromCharCode(first);
+    }
+    first = first + 1;
+  }
+  
+  
+  return undefined;
+}
+
+//test
+fearNotLetter("abce");
