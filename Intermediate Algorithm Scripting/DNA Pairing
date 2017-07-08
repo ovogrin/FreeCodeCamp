@@ -1,0 +1,19 @@
+
+function pairElement(str) {
+  var newArr = str.split("");
+  var newStr = [];
+  var pairs = [["A","T"],["T","A"],["C","G"],["G","C"]];
+  
+  for(i=0; i<newArr.length; i++){
+    for(j=0; j<pairs.length; j++){
+      if(newArr[i] === pairs[j][0]){
+        newStr.push(pairs[j]);
+      }
+    }
+  }
+  
+  return newStr;
+}
+
+//test
+pairElement("GCG");
