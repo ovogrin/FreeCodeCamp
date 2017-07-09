@@ -1,0 +1,22 @@
+function convertHTML(str) {
+  
+  if(str.search(/[&><"']/) > 0){
+    str = str.replace(/&/g, "&amp;");
+    str = str.replace(/</g, "&lt;");
+    str = str.replace(/>/g, "&gt;");
+    str = str.replace(/"/g, "&quot;");
+    str = str.replace(/'/g, "&apos;");
+    return str;
+  }
+  else{
+    //For the last example where the string is "<>",
+    //str.search was not detecting it
+    //For that reason it has been added here.
+    str = str.replace(/</g, "&lt;");
+    str = str.replace(/>/g, "&gt;");
+    return str;
+  }
+}
+
+//test
+convertHTML("Dolce & Gabbana");
