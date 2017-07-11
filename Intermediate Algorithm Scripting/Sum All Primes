@@ -1,0 +1,22 @@
+function sumPrimes(num) {
+  var sum=0;
+  
+  for(var i=2; i<= num; i++){
+    if(isPrime(i) === true)
+      sum = sum + i;
+  }
+  
+  return sum;
+}
+
+sumPrimes(10);
+
+//function to determine if a number is prime
+function isPrime(n) {
+    for (i = 2; i <= n / 2; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
