@@ -1,0 +1,42 @@
+// noprotect
+function smallestCommons(arr) {
+  var newArr = sortArray(arr);
+  var foundLCM = false;
+  
+  var lcm = 1;
+  while(!foundLCM){
+    for(var i=0; i<newArr.length; i++){
+      if(lcm % newArr[i] !== 0){
+        lcm++;
+        break;
+      }
+      else
+        if(i == newArr.length - 1 && lcm % newArr[i] == 0)
+          foundLCM = true;
+    }
+  }
+
+  return lcm;
+}
+
+smallestCommons([1, 13]);
+
+//----------------------------------
+//sorts an array of two numbers and creates a new array
+//with all the numbers in the range of the original to numbers
+function sortArray(arr){
+  var sortedArr = [];
+  var allElemArr = [];
+  
+  if(arr[0] < arr[1])
+    sortedArr = arr;
+  else{
+    sortedArr.push(arr[1]);
+    sortedArr.push(arr[0]);
+  }
+  
+  for(var i=sortedArr[0]; i<=sortedArr[sortedArr.length - 1]; i++){
+    allElemArr.push(i);
+  }
+  return allElemArr;
+}
