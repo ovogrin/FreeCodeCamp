@@ -1,0 +1,20 @@
+function binaryAgent(str) {
+  //Splits the values at each white space.  Puts the values into a String array.
+  var strArr = str.split(/\s/);
+  var decArr = [];
+  var finalStr = "";
+  //Convert each binary element into its corresponding decimal number.
+  for(var i=0; i<strArr.length; i++){
+      decArr.push(parseInt(strArr[i], 2));
+  }
+  //Converts each decimal number into its corresponding character and concatenates it
+  //to a finalStr String variable.
+  for(i=0; i<decArr.length; i++){
+    finalStr = finalStr + String.fromCharCode(decArr[i]);
+  }
+  
+  return finalStr;
+}
+
+//test
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
