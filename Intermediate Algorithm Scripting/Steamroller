@@ -1,0 +1,20 @@
+function steamrollArray(arr) {
+  var flatArr = [];
+  
+  steamrollRec(arr);
+  
+  function steamrollRec(arr) {
+  
+    for(var i=0; i<arr.length; i++){
+    if(!Array.isArray(arr[i]))
+      flatArr.push(arr[i]);
+    else
+      steamrollRec(arr[i]);
+    }
+  }
+  
+  return flatArr;
+}
+  
+//test
+steamrollArray([1, [2], [3, [[4]]]]);
