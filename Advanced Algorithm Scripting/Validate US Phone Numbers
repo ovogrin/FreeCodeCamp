@@ -1,0 +1,20 @@
+function telephoneCheck(str) {
+  
+  var numStr = str.replace(/[-()\s]/g,"");         //Removes all nondigit characters from the string
+  var strParentheses = str.replace(/[-\s]/g,"");   //Removes all nondigit characters except parentheses.
+  var regexp = /^(\(\d{3}\)\d{7})|^\d{10}$/;       //regexp that checks starting parentheses, then 3 digits, then closing parentheses, then 7 digits; or 10 digits from start
+  
+  if(numStr.length == 10){  
+    return regexp.test(strParentheses);
+  }
+  else
+    if(numStr.length == 11 && str.charAt(0) == 1){
+      regexp = /^1(\(\d{3}\)\d{7})|^1\d{10}$/;      //regexp that checks for starting 1, then left parentheses, 3 digits, right parentheses, then 7 digits, Or 11 digits from the start
+      return regexp.test(strParentheses);
+    }
+  
+  return false;
+}
+
+//test
+telephoneCheck("1 555)555-5555");
