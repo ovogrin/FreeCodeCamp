@@ -1,0 +1,23 @@
+function orbitalPeriod(arr) {
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  var base = 0;
+  var T = 0;
+  var newArr = [];
+   
+  for(var i in arr){
+    var result = {};
+    base = earthRadius + arr[i].avgAlt;
+    
+    T = Math.round(2*Math.PI*Math.sqrt(Math.pow(base, 3)/GM));//formula for orbital period.
+    
+    result.name = arr[i].name;
+    result.orbitalPeriod = T;
+    newArr.push(result);
+  }
+  
+  return newArr;
+}
+
+//test
+orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]);
